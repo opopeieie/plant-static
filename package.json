@@ -1,0 +1,22 @@
+{
+  "name": "plant-static",
+  "version": "1.0.0",
+  "description": "no description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opopeieie/plant-static.git"
+  },
+  "keywords": [
+    "plant"
+  ],
+  "author": "q",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opopeieie/plant-static/issues"
+  },
+  "homepage": "https://github.com/opopeieie/plant-static#readme"
+}
