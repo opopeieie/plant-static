@@ -1,0 +1,8 @@
+{
+  "account":{
+    "selectAll":"SELECT * FROM `account`",
+    "save":"INSERT INTO `account` SET ?",
+    "delete":"DELETE FROM account WHERE id = ?",
+    "update":"UPDATE account SET accountName = ?, accountPassword = ? WHERE id = ?"
+  }
+}
