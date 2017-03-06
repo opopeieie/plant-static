@@ -1,12 +1,9 @@
-const path = require('path'),
-    webpack = require('webpack'),
-    merge = require('webpack-merge'),
-    baseConfig = require('./webpack.config'),
-    HtmlWebpackPlugin = require('html-webpack-plugin'),
-    root = path.resolve(__dirname, '..');
+const webpack = require('webpack'),
+      merge = require('webpack-merge'),
+      config = require('./webpack.config'),
+      HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
-module.exports = merge(baseConfig, {
+module.exports = merge(config, {
     devServer: {
         historyApiFallback: true,//404
         hot:true,
@@ -16,6 +13,8 @@ module.exports = merge(baseConfig, {
     plugins:[
         new webpack.HotModuleReplacementPlugin(),//热启动插件
         new HtmlWebpackPlugin({
+            title:'plant',
+            templateContent:'<div id="app"></div>',
             inject:'body'//script标签注入body底部
         })
     ]

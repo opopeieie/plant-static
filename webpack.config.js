@@ -1,10 +1,10 @@
 const path = require('path');
-const root = path.resolve(__dirname, '..');//根目录
+const root = path.resolve(__dirname, '.');//根目录
 module.exports = {
-    entry: path.join(__dirname, '/plant/src/main.js'),//项目文件入口
+    entry: path.join(__dirname, 'plant/src/main.js'),//项目文件入口
     output: {
         path: path.join(root, 'dist'),//出口文件目录
-        filename: 'main1.js'//出口文件名
+        filename: 'main.js'//出口文件名
     },
     resolve: {
         alias: {
@@ -15,7 +15,7 @@ module.exports = {
             styles: path.join(root, 'plant/src/styles'),
             store: path.join(root, 'plant/src/store')
         },
-        extensions:['.js','.vue'],
+        extensions:['.js','.vue']
     },
     resolveLoader:{
     },
@@ -23,7 +23,6 @@ module.exports = {
         rules:[
             {test: /\.vue$/, loader: 'vue-loader'},
             {test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/},
-            { test: /\.html$/,loader: 'raw'},
             {test: /.css$/, loader: 'style!css'},
             {test: /\.less$/, loader: "style!css!less|postcss"},
             {test: /\.scss$/, loader: "style!css!sass|postcss"},

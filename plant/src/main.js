@@ -1,9 +1,7 @@
-const Vue =require('vue');
-const He = require('./components/Hello.vue');
+import Vue from 'vue/dist/vue';
+import He from './components/Hello.vue';
 new Vue({
     el:"#app",
-    template:{
-        template:'<div><he></he></div>'
-    },
+    template:'<div><he></he></div>',
     components:{He}
 });
