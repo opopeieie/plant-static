@@ -7,6 +7,7 @@ module.exports = merge(config, {
     devServer: {
         historyApiFallback: true,//404
         hot:true,
+        inline:true,//客户端会在后端改变的情况下刷新
         port: 8001
     },
     devtool: 'source-map',//调试
