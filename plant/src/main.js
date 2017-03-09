@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import {Provider} from 'react-redux';
 import {Router} from 'react-router';
-import store, { history } from 'STORE';
-import routes from 'ROUTE';
-
+import store,{history} from 'redux/store';
+import routes from './routes'
 
 
 const APPDOM = document.getElementById("app");
