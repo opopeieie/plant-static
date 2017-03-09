@@ -1,80 +1,20 @@
-import Vue from 'vue/dist/vue';
-import He from './components/Hello.vue';
-import babel from 'babel-polyfill';
-new Vue({
-    el:"#app",
-    template:'<div><he></he></div>',
-    components:{He}
-});
-const array = ["61042419820823001X",
-    "610404197202163012",
-    "610404198510256514",
-    "610481198812280029",
-    "610404198701290555",
-    "610402198909010791",
-    "610402198906046510",
-    "610402198911167499",
-    "610402196303201260",
-    "610402198810261195",
-    "610404197602080013",
-    "61010219771110031X",
-    "610425199210261713",
-    "610404198205251098",
-    "610481199308215417",
-    "61040219910407029X",
-    "610481199311090555",
-    "610402198104200790",
-    "610404197207193018",
-    "610404199307160538",
-    "610481198306135419",
-    "610404198107120019",
-    "412323198403056056",
-    "610404198903310024",
-    "610404198402220514",
-    "610427198110080032",
-    "610422198001160015",
-    "610423198805153415",
-    "610431199101075353",
-    "610422196707100023",
-    "610422199202090038",
-    "610429198803155917",
-    "610481197604111859",
-    "610404198406020018",
-    "610429198701295927",
-    "610481199005136260",
-    "610403197211090023",
-    "610422197709020048",
-    "610403199005021528",
-    "610125197412090363",
-    "610404198211245540",
-    "612133197305274222",
-    "610403198611030518",
-    "610403198610252020",
-    "610431199002024913",
-    "610427198612093319",
-    "610402198909297497",
-    "610423198809070051",
-    "610104198604093430",
-    "610425199204140237"];
-var a = genTest();
-window.onload = function(){
-    // judgeGen(a.next())
-};
-
-function judgeGen(obj){
-    if(obj.done == false){
-        let timeo = setTimeout(function(){
-            judgeGen(a.next());
-            clearTimeout(timeo);
-        },2000)
-    }
+import React from 'react';
+import ReactDom from 'react-dom';
+import {Provider} from 'react-redux';
+import {Router} from 'react-router';
+import store, { history } from 'STORE';
+import routes from 'ROUTE';
 
 
-}
 
-function* genTest(){
-    for(var i =0,len = array.length;i<len;i++){
-        yield window.location.href = "http://my.yangling-marathon.com/download/"+array[i];
-    }
-    // window.location.href = "http://my.yangling-marathon.com/download/61042419820823001X";
-}
+const APPDOM = document.getElementById("app");
+
+ReactDom.render(
+    <Provider store={store}>
+        <Router history={history} children={routes} />
+    </Provider>,
+    APPDOM
+);
+
+
+
