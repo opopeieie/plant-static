@@ -9,7 +9,7 @@ export default class Navbar extends Component {
     render () {
 
         return (
-            <nav>
+            <nav className="top-bar">
                 <a href="/html/">HTML</a> |
                 <a href="/css/">CSS</a> |
                 <a href="/js/">JavaScript</a> |
