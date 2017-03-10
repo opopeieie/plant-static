@@ -13,20 +13,20 @@ module.exports = {
             util: path.join(root, 'plant/src/util'),
             views: path.join(root, 'plant/src/views'),
             styles: path.join(root, 'plant/src/styles'),
-            store: path.join(root, 'plant/src/store')
+            redux: path.join(root, 'plant/src/redux'),
+            routes: path.join(root, 'plant/src/routes')
         },
-        extensions:['.js','.vue']
+        extensions: ['.js', '.vue']
     },
-    resolveLoader:{
-    },
-    module:{
-        rules:[
+    resolveLoader: {},
+    module: {
+        rules: [
             {test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/},
             {test: /.css$/, loader: 'style!css'},
             {test: /\.less$/, loader: "style!css!less|postcss"},
             {test: /\.scss$/, loader: "style!css!sass|postcss"},
             {test: /\.(jpg|png)$/, loader: "url?limit=8192"},
-            {test: /\.json$/,loader: 'json'},
+            {test: /\.json$/, loader: 'json'},
             {test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/, loader: 'file'},
 
         ]
