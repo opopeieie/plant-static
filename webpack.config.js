@@ -8,12 +8,11 @@ module.exports = {
     },
     resolve: {
         alias: {
-            components: path.join(root, 'plant/src/components'),
+            component: path.join(root, 'plant/src/components'),
             common: path.join(root, 'plant/src/common'),
             util: path.join(root, 'plant/src/util'),
             views: path.join(root, 'plant/src/views'),
             styles: path.join(root, 'plant/src/styles'),
-            redux: path.join(root, 'plant/src/redux'),
             routes: path.join(root, 'plant/src/routes')
         },
         extensions: ['.js', '.vue']

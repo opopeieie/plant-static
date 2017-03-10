@@ -1,10 +1,14 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDom from 'react-dom';
 import {Provider} from 'react-redux';
-import {Router} from 'react-router';
-import store,{history} from 'redux/store';
+import {Router,browserHistory,hashHistory} from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+import configureStore from './redux/store/configureStore'
 import routes from './routes'
 
+const store = configureStore();
+const history = syncHistoryWithStore(hashHistory,store);
 
 const APPDOM = document.getElementById("app");
 
