@@ -2,10 +2,12 @@ const path = require('path');
 const root = path.resolve(__dirname, '.');//根目录
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
-    entry: path.join(__dirname, 'plant/src/main.js'),//项目文件入口
+    entry: {
+        mainJs:path.join(__dirname, 'plant/src/main.js')
+    },//项目文件入口
     output: {
         path: path.join(root, 'dist'),//出口文件目录
-        filename: '[name]-[hash].min.js'
+        filename:'[name]-[hash].min.js'
     },
     resolve: {
         alias: {
@@ -44,4 +46,8 @@ module.exports = {
             {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
         ]
     }
+};
+
+module.exports = {
+
 };

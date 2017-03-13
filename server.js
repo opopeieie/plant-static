@@ -1,10 +1,10 @@
 const webpack = require('webpack'),
       merge = require('webpack-merge'),
       config = require('./webpack.config'),
-      ExtractTextPlugin = require('extract-text-webpack-plugin'),
+      cssConfig = require('./webpack.config.css'),
       HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = merge(config, {
+module.exports = merge(config,cssConfig, {
     devServer: {
         historyApiFallback: true,//404
         hot:true,
@@ -18,7 +18,6 @@ module.exports = merge(config, {
             title:'plant',
             templateContent:'<div id="app"></div>',
             inject:'body'//script标签注入body底部
-        }),
-        new ExtractTextPlugin('[name]-[hash].min.css')
+        })
     ]
 });
