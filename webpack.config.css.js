@@ -10,14 +10,13 @@ const root = path.resolve(__dirname, '.');//根目录
 
 
 module.exports = {
-    entry:{
-        foundation:path.join(__dirname, 'plant/src/styles/foundation.css'),
-        test:path.join(__dirname, 'plant/src/styles/test.css')
-    },
-    output: {
-        path: path.join(root, 'dist'),//出口文件目录
-        filename: "[name].css"
-    },
+    // entry:{
+    //     mainCss:path.join(__dirname, './dist/css/main.css'),
+    // },
+    // output: {
+    //     path: path.join(root, 'dist'),//出口文件目录
+    //     filename: "[name].css"
+    // },
     plugins: [
         new webpack.LoaderOptionsPlugin({
             options:{
@@ -26,6 +25,7 @@ module.exports = {
                 }
             }
         }),
+        new Ex({filename:'[name].css',allChunks:true})
     ]
 
 };
