@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "gulp dist",
+    "build": "gulp dist",
     "dev": "gulp dist && webpack-dev-server --config server.js"
   },
   "repository": {
