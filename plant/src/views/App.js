@@ -7,7 +7,7 @@ const App = ({ children, location }) => (
             <div className="off-canvas-content">
                 <Navbar location={location} />
 
-                <div className="container">
+                <div className="page-content">
                     { children }
                 </div>
 
