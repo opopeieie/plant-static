@@ -1,7 +1,7 @@
 export default {
   path: '/',
 
-  component: require('component/App').default,
+  component: require('views/App').default,
   
   indexRoute: {
     component: require('component/Welcome').default

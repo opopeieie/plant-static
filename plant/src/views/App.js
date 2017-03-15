@@ -2,16 +2,21 @@ import React from 'react'
 import Navbar from 'component/nav'
 
 const App = ({ children, location }) => (
-    <div>
-        <Navbar location={location} />
+    <div className="off-canvas-wrapper">
+        <div className="off-canvas-wrapper-inner">
+            <div className="off-canvas-content">
+                <Navbar location={location} />
 
-        <div className="container">
-            { children }
+                <div className="container">
+                    { children }
+                </div>
+
+                <footer>
+                    this is footer
+                </footer>
+            </div>
         </div>
 
-        <footer>
-            this is footer
-        </footer>
     </div>
 );
 

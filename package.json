@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp dist",
-    "dev": "gulp dist && webpack-dev-server --config server.js"
+    "dev": "gulp dist && webpack-dev-server --config server.js",
+    "start":"webpack-dev-server --config server.js"
   },
   "repository": {
     "type": "git",

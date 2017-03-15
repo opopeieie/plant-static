@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         mainJs:path.join(__dirname, 'plant/src/main.js'),
-        mainCss:path.join(__dirname,'./dist/css/main.css')
+        // mainCss:path.join(__dirname,'./dist/css/main.css')
     },//项目文件入口
     output: {
         path: path.join(root, 'dist'),//出口文件目录

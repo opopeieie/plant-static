@@ -1,5 +1,5 @@
 import 'babel-polyfill';
-// import './styles/foundation.css';//TODO:由webpack构建
+import './styles/index.css';//TODO:由webpack构建
 import React from 'react';
 import ReactDom from 'react-dom';
 import {Provider} from 'react-redux';
