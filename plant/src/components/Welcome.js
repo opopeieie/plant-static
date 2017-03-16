@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import Logon from './logon'
 /**
  * 本组件为欢迎页（首页）
  * 由于几乎没有交互逻辑
@@ -14,7 +15,7 @@ const Welcome = () => (
           <h1>欢迎使用 <br/> 我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</h1>
       </div>
       <div className="medium-4 columns">
-          <h1>我是登录界面我是登录界面我是登录界面我是登录界面我是登录界面</h1>
+          <Logon/>
       </div>
   </div>
 );
