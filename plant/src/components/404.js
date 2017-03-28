@@ -6,7 +6,7 @@ export default class NotFound extends Component {
     }
 
     componentWillMount() {
-        alert('404 NOT FOUND')
+        alert('404 NOT FOUND,Really????????');
         this.context.router.replace('/')
     }
 

@@ -8,7 +8,7 @@ export default class Logon extends Component {
     render() {
         return (
             <div className="panel callout">
-                <h1>我是登录界面我是登录界面我是登录界面我是登录界面我是登录界面</h1>
+                <h1>我是登录界面我是登录界面我是登录界面我是登录界面我是登录界面我真的是登录界面</h1>
             </div>
         )
     }
