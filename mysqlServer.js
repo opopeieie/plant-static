@@ -2,13 +2,6 @@
 var mysql = require('mysql');
 var sql = require('./sql.json');
 
-// var connection = mysql.createConnection({
-//     connectionLimit: 15,//怎么可能有15个人连你的...
-//     host: 'localhost',
-//     user: 'root',
-//     password: '123456',
-//     database: 'plant_static'
-// });
 
 export default class PlantSql {
     constructor(host,user,password,database) {

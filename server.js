@@ -1,12 +1,14 @@
 const webpack = require('webpack'),
       merge = require('webpack-merge'),
       config = require('./webpack.config'),
+      cssConfig = require('./webpack.config.css'),
       HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = merge(config, {
+module.exports = merge(config,cssConfig, {
     devServer: {
         historyApiFallback: true,//404
         hot:true,
+        inline:true,//客户端会在后端改变的情况下刷新
         port: 8001
     },
     devtool: 'source-map',//调试

@@ -1,0 +1,30 @@
+{
+  "title":"plant",
+  "theme":"black",
+  "component":{
+      "nav":{
+        "theme":"black",
+        "title":"PLANT",
+        "item":[
+          {
+            "name":"",
+            "path":""
+          },
+          {
+            "name":"",
+            "path":""
+          },
+          {
+            "name":"",
+            "path":""
+          }
+        ]
+      },
+    "logon":{
+
+    }
+  },
+  "views":{
+
+  }
+}
