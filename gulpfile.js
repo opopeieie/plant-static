@@ -18,4 +18,7 @@ gulp.task('clean',function(){
         .pipe(clean())
 });
 
-gulp.task('dist',['clean','minifyCss']);
+
+gulp.task('default', ['plant', 'watch']);
+//test pull request
+
